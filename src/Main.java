@@ -21,6 +21,10 @@ public class Main {
         for (int i = 0 ; i < boardGame; i++){
             for (int m = 0 ; m < boardGame; m++){
 
+                if (m % 2 == 0) {
+                    System.out.print(pattern);
+                } else System.out.print(i);
+
 
             }
             System.out.println();
