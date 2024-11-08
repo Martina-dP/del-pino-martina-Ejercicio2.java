@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        int boardGame = 8;
+        final  int BOARDGAME = 8;
         int boxSize ;
         char pattern ;
         Scanner input = new Scanner(System.in);
@@ -18,17 +18,21 @@ public class Main {
             else System.out.println("Debes introducir un valor mayor o igual a 1 y menor o igual a 15");
         }
 
-        for (int i = 0 ; i < boardGame; i++){
-            for (int m = 0 ; m < boardGame; m++){
-
-                if (m % 2 == 0) {
-                    System.out.print(pattern);
-                } else System.out.print(i);
-
-
+        for (int i = 0; i < BOARDGAME; i++) {
+            for (int row = 0; row < boxSize; row++) {
+                for (int j = 0; j < BOARDGAME; j++) {
+                    if ((i + j) % 2 != 0) {
+                        for (int col = 0; col < boxSize; col++) {
+                            System.out.print(pattern);
+                        }
+                    } else {
+                        for (int col = 0; col < boxSize; col++) {
+                            System.out.print(" ");
+                        }
+                    }
+                }
+                System.out.println();
             }
-            System.out.println();
         }
-
     }
 }
